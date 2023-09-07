@@ -16,7 +16,18 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from rest_framework import routers
+from music.views import PerformerViewSet, AlbumViewSet, SongViewSet
+
+router = routers.DefaultRouter()
+router.register(r'performers', PerformerViewSet)
+router.register(r'albums', AlbumViewSet)
+router.register(r'songs', SongViewSet)
+
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
 ]
+
+urlpatterns += router.urls
