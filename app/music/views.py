@@ -22,3 +22,7 @@ class SongViewSet(ModelViewSet):
     queryset = Song.objects.all()
     serializer_class = SongSerializer
     permission_classes = [IsAuthenticatedOrReadOnly]
+
+
+def index(request):
+    return render(request, 'index.html')

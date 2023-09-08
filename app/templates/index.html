@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music API</title>
+</head>
+<body>
+    <a href="{% url 'schema-swagger-ui' %}"><h2>Swagger</h2></a>
+    <ul>
+        <li>
+            <a href="{% url 'performer-list' %}"><h3>Исполнители</h3></a>
+        </li>
+        <li>
+            <a href="{% url 'album-list' %}"><h3>Альбомы</h3></a>
+        </li>
+        <li>
+            <a href="{% url 'song-list' %}"><h3>Песни</h3></a>
+        </li>
+    </ul>
+    <br><br><br>
+    <img src="{% static 'music_admin.png' %}" alt="My image">
+</body>
+</html>
