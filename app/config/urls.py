@@ -16,8 +16,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.views.generic import TemplateView
 from rest_framework import routers
 from music.views import PerformerViewSet, AlbumViewSet, SongViewSet
+from music.yasg import urlpatterns as doc_urls
 
 router = routers.DefaultRouter()
 router.register(r'performers', PerformerViewSet)
@@ -31,3 +33,4 @@ urlpatterns = [
 ]
 
 urlpatterns += router.urls
+urlpatterns += doc_urls
