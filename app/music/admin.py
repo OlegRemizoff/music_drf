@@ -3,7 +3,7 @@ from .models import Performer, Album, Song
 
 
 class SongAdmin(admin.ModelAdmin):
-    list_display = ('name', 'performer', 'album',  'position', )
+    list_display = ('id', 'name', 'performer', 'album',  'position', )
     list_filter = ('name', )
 
 
